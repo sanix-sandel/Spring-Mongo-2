@@ -4,10 +4,12 @@ import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import java.util.Collection;
 import java.util.Collections;
 
+@EnableMongoRepositories(basePackages = "com.sanix.springmongo.repository")
 @Configuration
 public class MongoConfig extends AbstractMongoClientConfiguration {
     //MongoTemplate is already defined in AbstractMongoClientConfiguration
